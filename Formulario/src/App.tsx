@@ -1,32 +1,15 @@
 import React from 'react';
 import './App.css';
+import { Birthdate } from './components/birthdate';
+import { Lastform } from './components/lastform';
+import { NameForm } from './components/nameform';
 
 function App() {
-  const [formData, setFormData] = useState({
-    name: '',
-  });
-
-  function handleSubmit(ev: any) {
-    ev.preventDefault();
-    console.log('Guardando', formData);
-  }
-  function handleChange(ev: any) {
-    const value =
-      ev.target.type === 'checkbox' ? ev.target.checked : ev.target.value;
-    setFormData({ ...formData, [ev.target.name]: value });
-  }
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <input
-          type="text"
-          name="name"
-          placeholder="Nombre"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-      </div>
+    <form>
+      <NameForm></NameForm>
+      <Lastform></Lastform>
+      <Birthdate></Birthdate>
     </form>
   );
 }
