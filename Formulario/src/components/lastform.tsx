@@ -1,8 +1,13 @@
 export function Lastform() {
   return (
     <div>
-      <input type="text" name="Lastname" placeholder="Last Name" required />
-      <button>Next</button>
+      <input
+        type="text"
+        name="lastname"
+        value="lastname"
+        placeholder="Last Name"
+        required
+      />
     </div>
   );
 }
